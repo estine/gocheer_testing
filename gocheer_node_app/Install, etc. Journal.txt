@@ -1,0 +1,26 @@
+Installed node.js:
+https://nodejs.org/en/
+
+**To run the node server, simply do: node index.js
+
+npm is a package manager for js
+
+Followed this tutorial:
+https://socket.io/get-started/chat/
+
+Made the app… looking for how to get it public:
+https://www.pluralsight.com/guides/exposing-your-local-node-js-app-to-the-world
+
+Tried localtunnel and ngrok: failed
+Signed up for now (Vercel): didn’t work
+
+Used serveo (WORKS GREAT!)
+https://serveo.net/
+
+Use this command:
+**ssh -R 80:localhost:3000 serveo.net
+
+My assigned address:
+https://validus.serveo.net
+
+
