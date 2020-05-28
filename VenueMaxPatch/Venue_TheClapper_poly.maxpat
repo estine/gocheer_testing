@@ -330,7 +330,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 486.0, 189.0, 93.0, 74.0 ],
-									"presentation_linecount" : 5,
 									"text" : "base:\n0.25 = 1.5 dB\n0.5   = 3 dB\n0.75 = 4.5 dB\n1 = 6dB (linear)"
 								}
 
@@ -836,8 +835,8 @@
 , 							{
 								"name" : "newobjYellow-1",
 								"default" : 								{
-									"fontsize" : [ 12.059008 ],
-									"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+									"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
+									"fontsize" : [ 12.059008 ]
 								}
 ,
 								"parentstyle" : "",
@@ -865,10 +864,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 127.5, 421.070068359375, 42.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
 					"text" : "out~ 2"
 				}
 
@@ -957,14 +952,27 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 135.0, 43.0, 98.0, 22.0 ],
+									"text" : "r NumbOfBuffers"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-5",
 									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 124.0, 83.5, 150.0, 33.0 ],
+									"patching_rect" : [ 124.0, 83.5, 151.0, 33.0 ],
 									"text" : "random # can be changed as we add more buffers"
 								}
 
@@ -1068,6 +1076,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-2", 1 ],
+									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-13", 1 ],
 									"order" : 0,
 									"source" : [ "obj-9", 0 ]
@@ -1104,8 +1119,8 @@
 , 							{
 								"name" : "newobjYellow-1",
 								"default" : 								{
-									"fontsize" : [ 12.059008 ],
-									"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+									"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
+									"fontsize" : [ 12.059008 ]
 								}
 ,
 								"parentstyle" : "",
@@ -1165,8 +1180,8 @@
 						"loopend" : [ 0.0, "ms" ],
 						"loopstart" : [ 0.0, "ms" ],
 						"mode" : "basic",
-						"originallength" : [ 0.0, "ticks" ],
-						"originaltempo" : 120.0,
+						"originallength" : [ 91.428569750860333, "ticks" ],
+						"originaltempo" : 20.536223616657161,
 						"phase" : [ 0.0, "ticks" ],
 						"pitchcorrection" : 0,
 						"quality" : "basic",
@@ -1233,6 +1248,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 49.5, 421.070068359375, 43.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"text" : "out~ 1"
 				}
 
@@ -1245,6 +1264,10 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 33.5, 30.0, 30.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"text" : "in 1"
 				}
 
@@ -1392,8 +1415,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"fontsize" : [ 12.059008 ],
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
+					"fontsize" : [ 12.059008 ]
 				}
 ,
 				"parentstyle" : "",
