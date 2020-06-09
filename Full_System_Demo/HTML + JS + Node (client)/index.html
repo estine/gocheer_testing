@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - AH_radiant_button</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- local clap sound! -->
+<audio id="clapsound" src="http://www.elistine.com/s/clap.mp3" autostart="false"></audio>
+
+<script src="nettest.js"></script>
+
+<script> 
+function PlaySound() { 
+	var sound = document.getElementById("clapsound");
+	sound.play();
+	clients.write('banger!');
+} </script>
+
+<header class="body-header">
+	<div class="container">
+		<h1>Go Cheer Test Button v.6_2_20</h1>
+	</div>
+</header>
+<section class="button-wrap">
+	<button onclick="PlaySound()" class="button center">
+		Tap to Clap
+		<span class="pulse"></span>
+	</button>
+</section>
+
+<form>
+  <label for="eventport">EVENT PORT:</label><br>
+  <input type="text" id="eventport" name="eventport"><br>
+</form>
+
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
