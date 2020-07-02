@@ -13,3 +13,19 @@ Second, run the following command:
 sudo ssh -i "ec2-amazon-linux.pem" ec2-user@ec2-18-222-176-253.us-east-2.compute.amazonaws.com
 
 If all is well, you should ssh into the instance. It has node installed, and the gocheer_testing git repository cloned in /. If you run “ps auxf | grep node”, you should be able to see the node server running (it’s in the background so a normal “ps” command won’t find it).
+
+---
+
+If the Node server is running, to kill it, run the following to find its process ID (PID):
+
+ps -auxf | grep node
+
+This will spit out a ~bunch~ of stuff. You're just looking for the process "node .". Finding this process, determine its PID (will be something like 12345).
+
+Then run the following (using that PID, assuming its 12345):
+
+kill -9 12345
+
+This kills the Node server, so a new Node server can be started!
+
+The code is currently in root, within the cloned github repo...
