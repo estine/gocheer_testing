@@ -28,7 +28,7 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(10, 10, 10, 0.8);
+	background: rgba(10, 10, 10, 0.5);
 	text-align: center;
 	margin: auto;
 
@@ -37,7 +37,7 @@ body {
 div.horizontal {
 	display: flex;
 	justify-content: center;
-	height: 100%;
+	height: 70%;
 }
 
 div.vertical {
@@ -70,15 +70,16 @@ div.vertical {
 	<div id="loginbox" class="lightbox" >
 		<div class="text-block">
     	<h2 style="color:white;font-family:helvetica;">Cheer Neer!</h2>
-	<h6 style="color:white;font-family:helvetica;width:60%;" >
+	<h6 style="color:white;font-family:helvetica;width:60%;text-align:center;" >
 	Cheer Near is an interactive, web-based platform that enables remote audiences to send their cheers to virtually-hosted events. Envisioned as a user-friendly way to send positive feedback to physically-distanced performers, Cheer Near infuses audience presence into any space. At showtime, the audience simply loads a webpage with an interactive button and they are ready to cheer.	
 	</h6>
 	</div>
 		<div class="horizontal">
 			<div class="vertical">
 				<div class="box">
+					<h2 text-align: center;
 					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
-					<button id="loginbutton" type="button">Enter Password Above to Start Cheering!</button>
+					<button id="loginbutton" type="button">Start Cheering!</button>
 					<p id="wrongPassword" style="display: none">wrong password</p>
 				</div>
 			</div>
