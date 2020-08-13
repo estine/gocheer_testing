@@ -46,7 +46,7 @@ function objectcount(v)
 			top = Math.floor(top);
 			
 			//obarray[i] = this.patcher.newobject("panel",left,top,15,0);
-			obarray[i] = this.patcher.newdefault(left, top, "panel", "@patching_rect", left, top, 15, 15, "@bgfillcolor", 0.427, 0.961, 0.992, 1.000, "@shape", 1);
+			obarray[i] = this.patcher.newdefault(left, top, "panel", "@patching_rect", left, top, 15, 15,"@presentation_rect", left, top, 15, 15, "@bgfillcolor", 0.427, 0.961, 0.992, 1.000, "@shape", 1, "@presentation", 1);
 		}
 		bang();	
 	}
