@@ -9,22 +9,37 @@
     <form action="">
       <button >Tap to Clap</button>
     </form>
+    <p class="numUsers"></p>
+    <ul id="messages"></ul>
 
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
+// console.log == browser
+// window.max == Max
+
   $(function () {
     var socket = io();
 
     $('form').submit(function(e){
+      console.log("button pressed");
       e.preventDefault(); // prevents page reloading
       socket.emit('chat message', socket.id+' clapped!');
-      $('#m').val('');
+      // $('#m').val('');
       return false;
     });
-    socket.on('chat message', function(msg){
+
+    socket.on("onConnect", (msg) => {
+      document.querySelector(".numUsers").innerHTML = msg;
+      // console.log(msg);
+      window.max.outlet(msg);
+    });
+
+    socket.on('chat message', function(x){
+      var msg = "calp!!!";
       $('#messages').append($('<li>').text(msg));
       window.max.outlet(msg);
+      // console.log(msg);
       //socket.emit(connectCounter);
     });
   });
