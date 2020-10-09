@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>*** GoCheer ***</title>
+    <title>*** GoCheer 4 MAX ***</title>
   </head>
 
   <body>
@@ -31,15 +31,15 @@
 
     socket.on("onConnect", (msg) => {
       document.querySelector(".numUsers").innerHTML = msg;
-      console.log(msg);
-//       window.max.outlet(msg);
+      // console.log(msg);
+      window.max.outlet(msg);
     });
 
     socket.on('chat message', function(x){
       var msg = "clap";
       $('#messages').append($('<li>').text(msg));
-//       window.max.outlet(msg);
-     console.log(msg);
+      window.max.outlet(msg);
+//      console.log(msg);
       //socket.emit(connectCounter);
     });
   });
